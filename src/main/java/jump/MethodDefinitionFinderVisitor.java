@@ -1,3 +1,5 @@
+package jump;
+
 import org.eclipse.jdt.core.dom.ASTVisitor;
 import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.SimpleName;
@@ -11,7 +13,7 @@ class MethodDefinitionFinderVisitor extends ASTVisitor {
     }
 
     public boolean visit(MethodInvocation node) {
-        String defLine = "";
+        String defLine;
         SimpleName name = node.getName();
         if (Visitor.methodTable.containsKey(name.getIdentifier()))
             defLine = "at Line " + Visitor.methodTable.get(name.getIdentifier());
