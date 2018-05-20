@@ -5,10 +5,10 @@ import org.eclipse.jdt.core.dom.CompilationUnit;
 import org.eclipse.jdt.core.dom.SimpleName;
 import org.eclipse.jdt.core.dom.MethodInvocation;
 
-class MethodDefinitionFinderVisitor extends ASTVisitor {
+class MethodCallingFinderVisitor extends ASTVisitor {
     CompilationUnit compilationUnit;
 
-    public MethodDefinitionFinderVisitor(CompilationUnit compilationUnit) {
+    public MethodCallingFinderVisitor(CompilationUnit compilationUnit) {
         this.compilationUnit = compilationUnit;
     }
 

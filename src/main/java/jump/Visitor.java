@@ -47,7 +47,7 @@ public class Visitor {
         cu.accept(declarationVisitor);
 
 
-        MethodDefinitionFinderVisitor definitionVisitor = new MethodDefinitionFinderVisitor(cu);
+        MethodCallingFinderVisitor definitionVisitor = new MethodCallingFinderVisitor(cu);
         cu.accept(definitionVisitor);
     }
 }
